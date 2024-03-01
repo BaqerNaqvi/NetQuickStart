@@ -22,7 +22,10 @@ namespace AONetQuickStart.Controllers
 
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
-        {            
+        {
+           // throw new Exception("This is a test exception.");
+           // _logger.LogCritical($"Weather forecasts are registered.");
+
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
